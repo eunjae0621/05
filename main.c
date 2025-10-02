@@ -4,27 +4,23 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	int x, y;
-	char c;
-	int result;
+	int answer = 59;
+	int trial = 0;
+	int num;
 	
-	printf("enter the calculation : ");
-	scanf("%i %c %i", &x, &c, &y);
-	
-	if (c == '+')
-		result = x+y;
-	
-	else if (c == '-')
-		result = x-y;
-	
-	else if (c == '*')
-		result = x*y;
-	
-	else if (c == '/')
-		result = x/y;
-	
+	do {
+		printf("Guess a number : ");
+		scanf("%i", &num);
+		trial++;
 		
-	printf("= %i\n", result);
+		if (num < answer)
+			printf("low!\n");
+		else if (num > answer)
+			printf("high!\n");
+	}
+	while (num != answer);
+	
+	printf("Congratulation! trials : %i\n", trial);
 
 	return 0;
 }
