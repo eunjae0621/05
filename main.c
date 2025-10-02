@@ -5,16 +5,13 @@
 
 int main(int argc, char *argv[]) {
 	int num;
-	printf("Input an integer : ");
-	scanf("%d", &num);
+	printf("정수 하나를 입력하시오. : ");
+	scanf("%i", &num);
 	
-	if (num > 0) 
-		printf("양수입니다.\n");
-	else if (num < 0 ) 
-		printf("음수입니다.\n");
-	else 
-		printf("0입니다.\n");
-	
+	if (num < 0)
+		printf("절대값은 %i 입니다.", -num);
+	else
+	    printf("절대값은 %i 입니다.\n", num);
 
 	return 0;
 }
