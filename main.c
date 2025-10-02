@@ -6,18 +6,25 @@
 int main(int argc, char *argv[]) {
 	int x, y;
 	char c;
+	int result;
 	
 	printf("enter the calculation : ");
 	scanf("%i %c %i", &x, &c, &y);
 	
 	if (c == '+')
-		printf("= %i\n", x+y);
+		result = x+y;
+	
 	else if (c == '-')
-		printf("= %i\n", x-y);
+		result = x-y;
+	
 	else if (c == '*')
-		printf("= %i\n", x*y);	
+		result = x*y;
+	
 	else if (c == '/')
-		printf("= %i\n", x/y);
+		result = x/y;
+	
+		
+	printf("= %i\n", result);
 
 	return 0;
 }
